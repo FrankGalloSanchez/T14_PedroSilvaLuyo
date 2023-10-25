@@ -1,3 +1,59 @@
+/* Estilos para la barra de navegación */
+
+nav {
+    background-color: #1E134A;
+    color: gold;
+    padding: 1px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    flex: 1;
+    text-align: left;
+}
+
+.logo {
+    width: 120px;
+    margin: 10px;
+}
+
+.title-container {
+    flex: 6;
+    text-align: left;
+}
+
+h1 {
+    color: gold;
+    font-family: 'Jomolhari', sans-serif; /* Usamos 'Jomolhari' como primera opción y sans-serif como alternativa */
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+
+/* Estilos para hacerlo responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .logo-container,
+    .title-container {
+        flex: 1;
+        text-align: center;
+    }
+    .logo {
+        width: 100px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -6,34 +62,23 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 /* Navbar */
-nav {
-    background-color: #1D274A;
-    color: #fff;
-    padding: 10px 0;
-}
-
 nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav .logo {
-    font-size: 24px;
-    text-decoration: none;
-    color: #fff;
-}
 
 nav ul.menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px;
 }
 
 nav ul.menu li a {
@@ -46,14 +91,15 @@ nav ul.menu li a {
     background-image: url(Img/header.png);
     background-size: cover;
     text-align: center;
-    padding: 100px 0;
+    padding: 280px 0; /* Agregado más espacio en la parte superior */
 }
+
 
 .hero h1 {
     position: relative;
     display: flex;
     letter-spacing: 5px;
-    font-size: 65px;
+    font-size: 40px;
     color: #f7fafd;
     font-weight: bold;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
@@ -220,7 +266,7 @@ nav ul.menu li a {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #1E134A;
     color: #fff;
     text-align: left;
     padding: 10px 0;
@@ -403,3 +449,269 @@ button:hover {
 
 
 
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing:border-box;
+  }
+  
+  :focus{
+      outline: none;
+  }
+  
+  body{
+      background: #DBDBDB;
+      font-family: 'Open sans';
+  }
+  
+  /* FORMULARIO =================================== */
+  
+  .form_wrap{
+      width: 1050px;
+      height: 530px;
+      margin: 50px auto;
+      display: flex;
+  
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Informacion de Contacto*/
+  
+  .cantact_info::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+  
+      position: absolute;
+      top: 0;
+      left: 0;
+  
+      background: #d8ce10;
+      opacity: 0.9;
+  }
+  
+  .cantact_info{
+      width: 38%;
+      position: relative;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      background-image: url('../T14_PaginaWeb/Img/header.png');
+      background-size: cover;
+      background-position: center center;
+  
+  }
+  
+  .info_title,
+  .info_items{
+      position: relative;
+      z-index: 2;
+      color: #fff;
+  }
+  
+  .info_title{
+      margin-bottom: 60px;
+  }
+  
+  .info_title span{
+      font-size: 100px;
+      display: block;
+      text-align: center;
+      margin-bottom: 15px;
+  }
+  
+  .info_title h2{
+      font-size: 35px;
+      text-align: center;
+  }
+  
+  .info_items p{
+      display: flex;
+      align-items: center;
+  
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 10px;
+  }
+  
+  .info_items p:nth-child(1) span{
+      font-size: 30px;
+      margin-right: 10px;
+  }
+  
+  .info_items p:nth-child(2) span{
+      font-size: 50px;
+      margin-right: 15px;
+      margin-left: 4px;
+  }
+  
+  
+  /* Formulario de contacto*/
+  form.form_contact{
+      width: 62%;
+      padding: 30px 40px;
+  }
+  
+  form.form_contact h2{
+      font-size: 25px;
+      font-weight: 600;
+      color: #303030;
+      margin-bottom: 30px;
+  }
+  
+  form.form_contact .user_info{
+      display: flex;
+      flex-direction: column;
+  }
+  
+  form.form_contact label{
+      font-weight: 600;
+  }
+  
+  form.form_contact input,
+  form.form_contact textarea{
+      width: 100%;
+      padding: 8px 0px 5px;
+      margin-bottom: 20px;
+  
+      border: none;
+      border-bottom: 2px solid #D1D1D1;
+  
+      font-family: 'Open sans';
+      color: #5A5A5A;
+      font-size: 14px;
+      font-weight: 400;
+  }
+  
+  form.form_contact textarea{
+      max-width: 100%;
+      min-width: 100%;
+      max-height: 90px;
+  }
+  
+  form.form_contact input[type="button"]{
+      width: 180px;
+      background: #ece340;
+      padding: 10px;
+      border: none;
+      border-radius: 25px;
+  
+      align-self: flex-end;
+  
+      color: #fff;
+      font-family: 'Open sans';
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+  }
+  
+  form.form_contact input[type="button"]:hover{
+      background: #3371B6;
+  }
+  
+  /* Ventana de errores*/
+  .modal_wrap{
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+  
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 3;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .mensaje_modal{
+      background: #fff;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+      width: 400px;
+      padding: 30px 20px 15px;
+  }
+  
+  .mensaje_modal h3{
+      text-align: center;
+      font-family: 'Ubuntu';
+      font-size: 20px;
+      font-weight: 400;
+  }
+  
+  .mensaje_modal h3:after{
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #C5C5C5;
+      margin: 10px 0px 15px;
+  }
+  
+  .mensaje_modal p{
+      font-size: 16px;
+      color: #606060;
+  }
+  
+  .mensaje_modal p:before{
+      content: "\f00d";
+      font-family: FontAwesome;
+      display: inline-block;
+      color: #E25151;
+      margin-right: 8px;
+  }
+  
+  #btnClose{
+      display: inline-block;
+      padding: 3px 10px;
+      margin-top: 10px;
+  
+      background: #E25151;
+      color: #fff;
+      border: 2px solid #B14141;
+      cursor: pointer;
+  
+      float: right;
+  }
+  
+
+  /* Estilos para el menú */
+.menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    margin: 0 10px;
+    text-align: center; /* Alinea el texto al centro */
+    line-height: 40px; /* Alinea verticalmente el texto en el centro */
+    text-decoration: none;
+    border: 2px solid #3498db; /* Borde del botón */
+    padding: 10px 20px;
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.menu-button:hover {
+    background-color: #2980b9; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
